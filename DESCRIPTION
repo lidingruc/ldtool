@@ -1,0 +1,11 @@
+Package: ldtool
+Type: Package
+Title: liding'€™s collection of misc
+Version: 0.1.0
+Author: liding
+Maintainer:  <liding@ruc.edu.cn>
+Description: rename some useful function to like stata and make it more convient to use.Also contain some functions for frequent use and data explore. 
+License: MIT
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.2
