@@ -12,5 +12,5 @@ mrtab(data, question.prefix)
 \item{question.prefix}{The common strings of that series of multiple response vaiables}
 }
 \description{
-Frequence tabll of Multiple response variable .
+进行多选题分析，类似stata中的mrtab
 }

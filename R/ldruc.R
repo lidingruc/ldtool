@@ -64,17 +64,29 @@ library(ggplot2)
 
 
 # 自定义函数名，少写一些字
+#' @title recode variable using rec in sjmisc.
+#' @name rec
+#' @description 用来进行变量的重编码.映射规则比较简单。
 #' @export
 rec  <-  sjmisc::rec
+
+#' @title make frequency table using sjmisc library.
+#' @name freq
+#' @description 用来制作频数表，使用sjmisc::frq函数
 #' @export
 freq  <-  sjmisc::frq
 
+#' @title make frequency table using expss library
+#' @name fre
+#' @description 使用expss::fre制作频数表
 #' @export
 fre  <- expss::fre
 
 st_options(ctable.prop = "n")
 #tabn <- sjPlot::tab_xtab# expss::cro_cases # tab of cases n
-
+#' @title make  count table using ctable function in summarytools library.
+#' @name tabf
+#' @description 使用summarytools::ctable制作简单的频数表
 #' @export
 tabf <- summarytools::ctable
 
@@ -83,6 +95,9 @@ tabf <- summarytools::ctable
 #' @export
 group_by <- dplyr::group_by
 
+#' @title make frequency graph using plot_frq in sjPlot.
+#' @name gtab
+#' @description 使用sjPlot::plot_frq制作频数条形图
 #' @export
 gtab <- sjPlot::plot_frq # 单变量条形图
 
@@ -92,10 +107,8 @@ gtab <- sjPlot::plot_frq # 单变量条形图
 
 #' @title Describe the data and display the varible name,label,type and position information in dataview.
 #' @name des
+#' @description 创建一个新dataframe描述数据集的变量名、变量标签及格式信息。
 #' @param dfile a dataframe.
-#' @examples
-#' library(ldtool)
-#' des(mtcars)
 #' @export
 #'
 des <- function (dfile) {
@@ -123,6 +136,7 @@ des <- function (dfile) {
 # 目前没法加权,交互分析也不行，如果能够复制stata的mrtab比较好
 #' @title Frequence tabll of Multiple response variable .
 #' @name mrtab
+#' @description 进行多选题分析，类似stata中的mrtab
 #' @param data A dataframe.
 #' @param question.prefix  The common strings of that series of multiple response vaiables
 #' @export
@@ -156,6 +170,7 @@ mrtab= function(data, question.prefix) {
 
 #' @title Round 0.5 up.
 #' @name  round2
+#' @description 常见的四舍五入而不是根据舍位的奇数偶数决定
 #' @param x A vector
 #' @param n Number of decimals you want to keep.
 #' @export
@@ -170,14 +185,22 @@ round2 = function(x, n) {  # Function to always round 0.5 up
 }
 
 # 设置expss列联表的输出窗口，更短的函数
+#' @title table output in viewer.
+#' @name  frev
+#' @description  设定fre函数结果在viewer输出
+#'
 library(expss)
 #' @export
-tabvout <-function ()
+frev <-function ()
 {
   options(expss.output = "viewer")
 }
+#' @title table output in txt.
+#' @name  fret
+#' @description  设定fre函数结果在viewer输出
 #' @export
-tabtout<- function ()
+
+fret<- function ()
 {
   options(expss.output = "default")
 }

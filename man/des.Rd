@@ -10,9 +10,5 @@ des(dfile)
 \item{dfile}{a dataframe.}
 }
 \description{
-Describe the data and display the varible name,label,type and position information in dataview.
-}
-\examples{
-library(ldtool)
-des(mtcars)
+创建一个新dataframe描述数据集的变量名、变量标签及格式信息。
 }

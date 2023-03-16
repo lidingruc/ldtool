@@ -12,5 +12,5 @@ round2(x, n)
 \item{n}{Number of decimals you want to keep.}
 }
 \description{
-Round 0.5 up.
+常见的四舍五入而不是根据舍位的奇数偶数决定
 }
